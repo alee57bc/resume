@@ -1,0 +1,130 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage[default]{sourcesanspro}
+\usepackage{parskip}
+
+% Prevent word hyphenation
+\usepackage[none]{hyphenat}
+
+% Safety net: avoid words spilling into margin
+\emergencystretch=1em
+
+
+% Adjust margins to match original
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+% Section formatting (compact, with rule)
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule \vspace{-6pt}]
+
+% Itemize formatting
+\setlist[itemize]{left=1em,label=\textbullet,nosep}
+
+% Bullet list formatting
+\setlist[itemize]{left=1em,label=\textbullet,nosep,itemsep=0pt,topsep=0pt,parsep=0pt}
+
+% Bullet list formatting: compact + small text
+\setlist[itemize]{
+  left=1em,
+  label=\textbullet,
+  nosep,
+  itemsep=0pt,
+  topsep=0pt,
+  parsep=0pt,
+  before=\small
+}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\LARGE \textbf{Angelina Lee}} \\[3pt]
+    \href{mailto:alee57bc@gmail.com}{alee57bc@gmail.com} |
+    \href{https://www.linkedin.com/in/alee57bc/}{linkedin.com/in/alee57bc}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\textbf{The Pennsylvania State University} \hfill University Park, PA \\
+\footnotesize{\textit{Bachelor of Science in Computer Science | GPA: 3.86/4.00 \hfill Aug 2023 -- May 2027}} \\
+\footnotesize{\textbf{Minors:} Mathematics, Computer Engineering, Cybersecurity} \\
+\footnotesize{\textbf{Relevant Coursework:} Object-Oriented Programming, Data Structures \& Algorithms, Operating Systems, Computer Architecture, Linear Algebra, Systems Programming, Programming Language Concepts, Statistics and Probability, Computer Vision, Wireless Systems and Security}
+\vspace{-7pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\small{
+\textbf{Languages:}  Python, Java, C, C++, HTML, CSS, JavaScript, Pandas, Assembly, PyTorch, Racket, SQL, LangChain, Swift \\
+\textbf{Technologies:} React, React Native, Expo, Linux, Git, AWS, Unix Shell Scripting, Azure, PyTorch, OpenAI, Hugging Face, Verilog \\
+\textbf{Interests:} Artificial Intelligence, Machine Learning, Quantum, Deep Learning, Embedded Systems, Cloud, Cybersecurity
+}
+\vspace{-7pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+
+\normalsize{\textbf{AI Engineer Intern} \hfill May 2025 -- Present} \\
+\footnotesize{\textit{IBM \hfill Philadelphia, PA}}
+\vspace{-5pt}
+\begin{itemize}
+  \item Built an elastic generative AI system in WatsonX, achieving 80\% transformation accuracy when converting ADABAS Natural code, allowing enterprises to modernize critical applications faster, cut technical debt, and scale adoption of cloud-ready solutions.
+  \item Partnered with global engineering teams to design an intelligent virtual support agent with 3 AI-powered modules (conversational, diagnostic, contextual querying), cutting troubleshooting time by 35\% and improving customer satisfaction for millions of users.
+  \item Spearheaded a 12+ participant AI workshop, enabling attendees to build functional agents and boost adoption of WatsonX
+  \item Built multiple digital threads to demonstrate product applications across client industries, strengthening real-world relevance
+  \item Curated a 100-dataset corpus from 1,000+ cloud sources using WatsonX Orchestrate, enhancing data transparency and accelerating decision-making across internal teams and external stakeholders
+\end{itemize}
+
+\normalsize{\textbf{Programming and Computation II Course Grader} \hfill Jan 2025 -- Present} \\
+\footnotesize{\textit{The Pennsylvania State University, College of Engineering \hfill University Park, PA}}
+\vspace{-5pt}
+\begin{itemize}
+    \item Evaluated 2,000+ coding assignments and exams for 400+ students, ensuring consistent grading and improving code quality
+    \item Delivered detailed, personalized feedback to strengthen students’ ability to write robust, efficient, and reusable code, fostering improved programming practices
+\end{itemize}
+
+\normalsize{\textbf{Calculus with Analytic Geometry Learning Assistant} \hfill Jan 2024 -- Present} \\
+\footnotesize{\textit{The Pennsylvania State University, Eberly College of Science \hfill University Park, PA}}
+\vspace{-5pt}
+\begin{itemize}
+  \item Mentored 30+ students in lectures and led interactive discussions, strengthening comprehension of advanced math concepts
+  \item Hosted weekly office hours for 1,000+ students, providing tailored guidance that improved problem-solving and exam readiness
+  \item Collaborated with instructors to refine curriculum, making advanced coursework more accessible and engaging for diverse learners
+\end{itemize}
+
+\normalsize{\textbf{Full-Stack Developer} \hfill Feb 2025 -- May 2025} \\
+\footnotesize{\textit{Flourish \hfill Remote}}
+\vspace{-5pt}
+\begin{itemize}
+  \item Directed a team of 3 developers in building a scalable wellness-tracking platform, ensuring on-time delivery of new features
+  \item Developed and maintained cross-platform mobile applications using React Native and Expo, delivering a consistent, user-friendly interface across iOS and Android while optimizing performance to reduce latency by 20\% and enhance program scalability
+  \item Collaborated with a 12-member cross-functional team to design and integrate back-end architecture, APIs, and databases, strengthening user engagement and enabling real-time wellness tracking and data visualization
+\end{itemize}
+
+\normalsize{\textbf{Information Technology Intern} \hfill May 2024 -- Aug 2024} \\
+\footnotesize{\textit{Temple University \hfill Philadelphia, PA}}
+\vspace{-5pt}
+\begin{itemize}
+  \item Resolved 100+ technical issues with a 95\% first-call resolution rate, significantly reducing downtime for faculty and students
+  \item Coordinated the setup of a 30-workstation computer lab, configuring customized software one week ahead of schedule
+  \item Engineered and deployed a cross-departmental support request platform, leveraging full-stack skills to create a centralized system that increased overall user-to-maintenance efficiency by 25\%
+\end{itemize}
+\vspace{-7pt}
+%-----------PROJECTS-----------
+\section{Projects}
+\normalsize{\textbf{Interactive Food Review Map}} \hfill Sept 2025 -- Present
+\vspace{-5pt}
+\begin{itemize}
+  \item Developed a full-stack web application using HTML, CSS, JavaScript, and React, integrating Google Maps API to build an interactive map that tracks user-visited locations and enables food rating functionality, enhancing engagement and usability
+\end{itemize}
+
+\end{document}
