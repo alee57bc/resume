@@ -1,131 +1,208 @@
 \documentclass[letterpaper,11pt]{article}
 
-% Packages
+\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[default]{sourcesanspro}
-\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-% Prevent word hyphenation
-\usepackage[none]{hyphenat}
+%font
+ \usepackage[default]{sourcesanspro}
 
-% Safety net: avoid words spilling into margin
-\emergencystretch=1em
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-
-% Adjust margins to match original
+% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
-% Section formatting (compact, with rule)
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\titlerule \vspace{-6pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Itemize formatting
-\setlist[itemize]{left=1em,label=\textbullet,nosep}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-% Bullet list formatting
-\setlist[itemize]{left=1em,label=\textbullet,nosep,itemsep=0pt,topsep=0pt,parsep=0pt}
-
-% Bullet list formatting: compact + small text
-\setlist[itemize]{
-  left=1em,
-  label=\textbullet,
-  nosep,
-  itemsep=0pt,
-  topsep=0pt,
-  parsep=0pt,
-  before=\small
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-7pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------RESUME START----------------
 
 \begin{document}
 
-%----------HEADER----------
+%----------HEADING----------
 \begin{center}
-    {\LARGE \textbf{Angelina Lee}} \\[3pt]
-    \href{mailto:alee57bc@gmail.com}{alee57bc@gmail.com} |
-    \href{https://www.linkedin.com/in/alee57bc/}{linkedin.com/in/alee57bc |
-    \href{https://github.com/alee57bc}{github.com/alee57bc} 
+    \textbf{\Huge \scshape Angelina Lee} \\ \vspace{1pt}
+    \small \href{alee57bc@gmail.com}{\underline{alee57bc@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/alee57bc/}{\underline{linkedin.com/in/alee57bc}} $|$
+    \href{https://github.com/alee57bc}{\underline{github.com/alee57bc}}
+    \vspace{-6pt}
 \end{center}
 
 %-----------EDUCATION-----------
 \section{Education}
-\textbf{The Pennsylvania State University} \hfill University Park, PA \\
-\footnotesize{\textit{Bachelor of Science in Computer Science | GPA: 3.86/4.00 \hfill Aug 2023 -- May 2027}} \\
-\footnotesize{\textbf{Minors:} Mathematics, Computer Engineering, Cybersecurity} \\
-\footnotesize{\textbf{Relevant Coursework:} Object-Oriented Programming, Data Structures \& Algorithms, Operating Systems, Computer Architecture, Linear Algebra, Systems Programming, Programming Language Concepts, Statistics and Probability, Computer Vision, Wireless Systems and Security}
-\vspace{-7pt}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+        {The Pennsylvania State University}{University Park, PA}
+        {Bachelor of Science in Computer Science, Minor in Computer Engineering, Cybersecurity, Mathematics}{Aug. 2023 -- May 2027}
+        \resumeItemListStart
+            \resumeItem{\textbf{Relevant Coursework}: \footnotesize  Object-Oriented Programming, Data Structures \& Algorithms, Operating Systems, Computer Architecture, Linear Algebra, Systems Programming, Programming Language Concepts, Statistics and Probability, Computer Vision, Wireless Systems and Security}       
+        \resumeItemListEnd
+    \vspace{-9pt}
+    \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\small{
-\textbf{Languages:}  Python, Java, C, C++, HTML, CSS, JavaScript, Pandas, Assembly, PyTorch, Racket, SQL, LangChain, Swift \\
-\textbf{Technologies:} React, React Native, Expo, Linux, Git, AWS, Unix Shell Scripting, Azure, PyTorch, OpenAI, Hugging Face, Verilog \\
-\textbf{Interests:} Artificial Intelligence, Machine Learning, Quantum, Deep Learning, Embedded Systems, Cloud, Cybersecurity
-}
-\vspace{-7pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, Java, C, C++, HTML, CSS, JavaScript, Pandas, Assembly, PyTorch, Racket, SQL, LangChain, Swift} \\
+    \textbf{Technologies}{:  React, React Native, Expo, Linux, Git, AWS, Unix Shell Scripting, Azure, PyTorch, OpenAI, Hugging Face, Verilog} \\
+    \textbf{Interests}{: Artificial Intelligence, RAG, Machine Learning, Quantum, Deep Learning, Embedded Systems, Cloud, Cybersecurity}
+    }}
+\vspace{-10pt}
+\end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
+\resumeSubHeadingListStart
 
-\normalsize{\textbf{AI Engineer Intern} \hfill May 2025 -- Present} \\
-\footnotesize{\textit{IBM \hfill Philadelphia, PA}}
-\vspace{-5pt}
-\begin{itemize}
-  \item Built an elastic generative AI system in WatsonX, achieving 80\% transformation accuracy when converting ADABAS Natural code, allowing enterprises to modernize critical applications faster, cut technical debt, and scale adoption of cloud-ready solutions.
-  \item Partnered with global engineering teams to design an intelligent virtual support agent with 3 AI-powered modules (conversational, diagnostic, contextual querying), cutting troubleshooting time by 35\% and improving customer satisfaction for millions of users.
-  \item Spearheaded a 12+ participant AI workshop, enabling attendees to build functional agents and boost adoption of WatsonX
-  \item Built multiple digital threads to demonstrate product applications across client industries, strengthening real-world relevance
-  \item Curated a 100-dataset corpus from 1,000+ cloud sources using WatsonX Orchestrate, enhancing data transparency and accelerating decision-making across internal teams and external stakeholders
-\end{itemize}
+    \resumeSubheading
+    {AI Engineer}{May 2025 -- Present}
+    {IBM}{Philadelphia, PA}
+        \vspace{-3pt}
+        \resumeItemListStart
+            \resumeItem{Engineered a scalable generative AI system in WatsonX that automated complex legacy code transformation into modern coding languages with 80\% accuracy, accelerating modernization and large-scale adoption of cloud-ready solutions}
+            \resumeItem{Partnered with 10 engineers to construct an advanced intelligent virtual support agent with conversational, diagnostic, and contextual modules, reducing troubleshooting time by 35\% and improving customer satisfaction for millions}
+            \resumeItem{Curated a dataset from 1,000+ cloud sources, to improve the visibility of data and reduce searching time by 20\%}
+            \resumeItem{Led a 12+ participant AI workshop, leading to enhanced interest and a second workshop to further discuss opportunities}
+            \resumeItem{Developed and deployed a fully functional AI agent with WatsonX Orchestrate ADK, streamlining workflow automation and demonstrating end-to-end agent design capabilities}
+        \resumeItemListEnd
+    \vspace{-2pt}
 
-\normalsize{\textbf{Programming and Computation II Course Grader} \hfill Jan 2025 -- Present} \\
-\footnotesize{\textit{The Pennsylvania State University, College of Engineering \hfill University Park, PA}}
-\vspace{-5pt}
-\begin{itemize}
-    \item Evaluated 2,000+ coding assignments and exams for 400+ students, ensuring consistent grading and improving code quality
-    \item Delivered detailed, personalized feedback to strengthen students’ ability to write robust, efficient, and reusable code, fostering improved programming practices
-\end{itemize}
+    \resumeSubheading
+    {Programming and Computation II Course Grader}{January 2025 -- Present}
+    {The Pennsylvania State University}{University Park, PA}
+        \vspace{-2pt}
+        \resumeItemListStart
+            \resumeItem{Evaluated 2,000+ coding assignments and exams for 400+ students, ensuring accurate grading and enhancing code quality}
+            \resumeItem{Delivered detailed, personalized feedback to strengthen students’ ability to write robust, efficient, and reusable code, fostering improved programming practices}
+        \resumeItemListEnd
+    \vspace{-2pt}
+        
+    \resumeSubheading
+    {Calculus with Analytic Geometry Learning Assistant}{January 2024 -- Present}
+    {The Pennsylvania State University}{University Park, PA}
+    \vspace{-2pt}
+        \resumeItemListStart
+            \resumeItem{Partnered with faculty to refine curriculum, making advanced coursework more accessible and engaging for diverse}
+            \resumeItem{Mentored 30+ students in lectures and hosted office hours for 1,000+ students, boosting comprehension of complex materials}
+        \resumeItemListEnd
+    \vspace{-2pt}
 
-\normalsize{\textbf{Calculus with Analytic Geometry Learning Assistant} \hfill Jan 2024 -- Present} \\
-\footnotesize{\textit{The Pennsylvania State University, Eberly College of Science \hfill University Park, PA}}
-\vspace{-5pt}
-\begin{itemize}
-  \item Mentored 30+ students in lectures and led interactive discussions, strengthening comprehension of advanced math concepts
-  \item Hosted weekly office hours for 1,000+ students, providing tailored guidance that improved problem-solving and exam readiness
-  \item Collaborated with instructors to refine curriculum, making advanced coursework more accessible and engaging for diverse learners
-\end{itemize}
+    \resumeSubheading
+    {Full-Stack Developer}{February 2025 -- May 2025}
+    {Flourish}{Remote}
+    \vspace{-2pt}
+        \resumeItemListStart
+            \resumeItem{Built React Native/Expo mobile apps, reducing latency by 10\% and enhancing scalability across iOS and Android}
+            \resumeItem{Collaborated with a 12-member cross-functional team to design APIs, databases, and backend systems, enabling real-time wellness tracking and visualization}
+    \resumeItemListEnd
+    \vspace{-9pt}
+\resumeSubHeadingListEnd
 
-\normalsize{\textbf{Full-Stack Developer} \hfill Feb 2025 -- May 2025} \\
-\footnotesize{\textit{Flourish \hfill Remote}}
-\vspace{-5pt}
-\begin{itemize}
-  \item Directed a team of 3 developers in building a scalable wellness-tracking platform, ensuring on-time delivery of new features
-  \item Developed and maintained cross-platform mobile applications using React Native and Expo, delivering a consistent, user-friendly interface across iOS and Android while optimizing performance to reduce latency by 20\% and enhance program scalability
-  \item Collaborated with a 12-member cross-functional team to design and integrate back-end architecture, APIs, and databases, strengthening user engagement and enabling real-time wellness tracking and data visualization
-\end{itemize}
-
-\normalsize{\textbf{Information Technology Intern} \hfill May 2024 -- Aug 2024} \\
-\footnotesize{\textit{Temple University \hfill Philadelphia, PA}}
-\vspace{-5pt}
-\begin{itemize}
-  \item Resolved 100+ technical issues with a 95\% first-call resolution rate, significantly reducing downtime for faculty and students
-  \item Coordinated the setup of a 30-workstation computer lab, configuring customized software one week ahead of schedule
-  \item Engineered and deployed a cross-departmental support request platform, leveraging full-stack skills to create a centralized system that increased overall user-to-maintenance efficiency by 25\%
-\end{itemize}
-\vspace{-7pt}
 %-----------PROJECTS-----------
 \section{Projects}
-\normalsize{\textbf{Interactive Food Review Map}} \hfill Sep 2025 -- Present
-\vspace{-5pt}
-\begin{itemize}
-  \item Developed a full-stack web application using HTML, CSS, JavaScript, and React, integrating Google Maps API to build an interactive map that tracks user-visited locations and enables food rating functionality, enhancing engagement and usability
-\end{itemize}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+
+    %\resumeProjectHeading
+    %    {\textbf{AI-Powered Vulnerability Tracker} $|$ \emph{items}}{Oct 2025 -- Present}
+    %    \resumeItemListStart
+    %        \resumeItem{}
+    %    \resumeItemListEnd
+    
+    \resumeProjectHeading
+    {\textbf{BiteTrail} $|$ \emph{React, HTML, CSS, JavaScript}}{Oct 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem{Developed a full-stack web application using React and Google Maps API that enables users to log visited restaurants, record reviews, and rate food, improving social food discovery and personalized dining recommendations}
+        \resumeItemListEnd
+    \vspace{-3pt}
+        
+    \resumeProjectHeading
+        {\textbf{SoundScout} $|$ \emph{Spotify API, OpenAI, HTML, CSS, JavaScript}}{September 2025}
+            \resumeItemListStart
+                \resumeItem{Designed and developed a full-stack, AI-powered music recommendation platform integrating the Spotify Web API with an intelligent agent to analyze user listening behavior and deliver personalized song or playlist suggestions}
+                \resumeItem{Implemented advanced recommendation features allowing users to discover tracks by mood, genre, BPM, or similarity to a given artist/song, enhancing music discovery and user engagement}
+            \resumeItemListEnd
+    \vspace{-9pt}
+\resumeSubHeadingListEnd
+%--------------OTHER----------------
+\section{Other}
+\resumeSubHeadingListStart
+    \vspace{-2pt}
+        \resumeProjectHeading
+        {\textbf{The Daily Collegian}}{September 2025 -- Present}
+            \resumeItemListStart
+                \resumeItem{Maintain and enhance a full-stack analytics dashboard to track and visualize multi-platform social media performance}
+                \resumeItem{Develop and deploy machine learning models (NER, clustering, contextual analysis) to extract insights from decades of Collegian content, to enable trend discovery and audience engagement analysis}
+            \vspace{-2px}
+            \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 \end{document}
